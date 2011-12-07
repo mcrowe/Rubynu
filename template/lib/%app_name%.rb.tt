@@ -1,0 +1,10 @@
+require "rubygems"
+require "bundler"
+Bundler.setup
+
+class <%= app_name.camelcase %>
+end
+
+Dir[File.expand_path(File.dirname(__FILE__) + "/<%= app_name %>/*.rb")].each do |file|
+  require file
+end

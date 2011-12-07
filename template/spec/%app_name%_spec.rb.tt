@@ -1,0 +1,5 @@
+require 'spec_helper'
+
+describe <%= app_name.camelcase %> do
+  pending 'Add specs!'
+end
