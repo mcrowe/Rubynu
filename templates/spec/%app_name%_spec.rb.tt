@@ -1,0 +1,5 @@
+require 'spec_helper'
+
+describe <%= Thor::Util.camel_case(app_name) %> do
+  pending 'Add specs!'
+end

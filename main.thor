@@ -1,10 +1,7 @@
-require 'active_support/core_ext/string/inflections'
-
 class Rubynu < Thor::Group
   include Thor::Actions
 
   argument :app_name
-
 
   def self.source_root
     File.dirname(__FILE__)
@@ -15,7 +12,7 @@ class Rubynu < Thor::Group
   end
   
   def apply_directory_template
-    directory 'template', app_name
+    directory 'templates', app_name
   end
 
   def print_setup_message

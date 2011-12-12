@@ -2,7 +2,7 @@ require "rubygems"
 require "bundler"
 Bundler.setup
 
-class <%= app_name.camelcase %>
+class <%= Thor::Util.camel_case(app_name) %>
 end
 
 Dir[File.expand_path(File.dirname(__FILE__) + "/<%= app_name %>/*.rb")].each do |file|
