@@ -1,5 +1,4 @@
 # Rubynu
-## A scaffold generator for generic ruby projects
 
 Rubynu generates a basic scaffold for a generic ruby project. It is a thor script that builds projects using a very customizable template. The project it generates is my preferred starting point for a new ruby project&mdash;using rvm, git, and rspec&mdash;but it is designed to be easily modified to whatever you prefer.
 
