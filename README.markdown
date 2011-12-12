@@ -1,8 +1,22 @@
-# Rubynu
+# Rubynu—A scaffold generator for ruby projects
 
-Rubynu generates a basic scaffold for a generic ruby project. It is a thor script that builds projects using a very customizable template. The project it generates is my preferred starting point for a new ruby project&mdash;using rvm, git, and rspec&mdash;but it is designed to be easily modified to whatever you prefer.
+Creating my preferred scaffolding for new ruby projects by hand has gotten old. Sure, there are tools out there like bundler's `bundle gem` to do this for you, but they aren't flexible enough to meet everybody's preferences. I want something as flexible as my tastes are fickle, something I can change the template to on a whim.
 
-Check out the `templates` directory to see exactly what gets generated out of the box.
+So, I built `rubynu`. It's a Thor script that leans heavily on Thor's directory templating abilities. Thor is amazing for this kind of generator: instead of building everything programatically, you can define an entire directory template&mdash;using erb templating for file contents, file names, and even directory structure. This kind of template makes it stupid easy to add new files, or to do any number of structural changes to it without touching the script itself. By Thor's Hammer!
+
+Currently, `rubynu` builds a project with the standard structure:
+
+    bin/
+    lib/
+      %app_name%.rb
+      %app_name%/
+    spec/
+    Gemfile
+    README.markdown
+   
+It also sets up rspec, with a `spec_helper`, `.rspec`, and a pending spec; RVM with an `.rvmrc`; git with a `.gitignore`; as well as some useful scaffolded code.
+
+To see exactly what `rubynu` generates, check out the `templates` directory.
 
 ### Installation
 
