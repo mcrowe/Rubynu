@@ -1,0 +1,1 @@
+require Dir.pwd + "/lib/<%= app_name %>.rb"
