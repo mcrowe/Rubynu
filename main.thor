@@ -15,6 +15,10 @@ class Rubynu < Thor::Group
     directory 'templates', app_name
   end
 
+  def make_binary_executable
+    chmod "bin/#{app_name}", 0755
+  end
+
   def print_setup_message
     say "\nDone\n", :yellow
     say <<-EOS
