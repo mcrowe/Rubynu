@@ -16,7 +16,7 @@ class Rubynu < Thor::Group
   end
 
   def make_binary_executable
-    chmod "bin/#{app_name}", 0755
+    chmod "#{app_name}/bin/#{app_name}", 0755
   end
 
   def print_setup_message
